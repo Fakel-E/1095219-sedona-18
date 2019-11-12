@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link> <!-- Здесь подключаем шрифты -->
+  <link> <!-- Здесь подключаем normalize, если потребуется -->
+  <link> <!-- Здесь подключаем style.css -->
+</head>
+
+<body>
+  <div class="container-center">
+    <header class="page-header">
+      <a href="index.html" class="page-header__logo">
+        <img src="#" alt="Логотип города Седона" class="page-header__logo-img"> <!-- вставляем логотип -->
+      </a>
+      <nav aria-label="Навигация по сайту" class="main-nav">
+        <button class="main-nav__toogle" type="button">Открыть меню сайта</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="#">Главная</a>
+            </li>
+            <li class="main-nav__item--active">
+              <a href="photo.html">Фото и видео</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="https://up.htmlacademy.ru/adaptive/18">HTML ACADEMY</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="welcome">
+        <img src="#" class="welcome__img--photo" alt="Добро пожаловать в Седону">
+      </div>
+    </header>
+
+    <section class="gallery">
+      <h2 class="gallery__head">Фото и видео</h2>
+      <p>не можете решиться на путешествие из-за курса? фотографии помогут вам забыть о политике и экономике</p>
+      <div class="photo-wrap">
+        <figure class="gallery__photo">
+          <p><img src="#" alt="неродные просторы" class="photo__img"></p>
+          <figcaption class="photo__head">Неродные просторы</figcaption>
+        </figure>
+        <p class="photo-author">Автор фото: Борис</p>
+        <div class="like">
+          <label for="spaces">
+            <button type="button" class="like__btn"><img src="#" alt="лайк"></button>
+            <input type="text" name="spaces" id="spaces" placeholder="1350" class="like__number">
+          </label>
+        </div>
+
+        <figure class="gallery__photo">
+          <p><img src="#" alt="Местная растительность" class="photo__img"></p>
+          <figcaption class="photo__head">Местная растительность</figcaption>
+        </figure>
+        <p class="photo-author">Автор фото: Сергей</p>
+        <div class="like">
+          <label for="grass">
+            <button type="button" class="like__btn"><img src="#" alt="лайк"></button>
+            <input type="text" name="grass" id="grass" placeholder="143" class="like__number">
+          </label>
+        </div>
+
+        <figure class="gallery__photo">
+          <p><img src="#" alt="Дорога на север" class="photo__img"></p>
+          <figcaption class="photo__head">Дорога на север</figcaption>
+        </figure>
+        <p class="photo-author">Автор фото: Петр</p>
+        <div class="like">
+          <label for="road">
+            <button type="button" class="like__btn"><img src="#" alt="лайк"></button>
+            <input type="text" name="road" id="road" placeholder="96" class="like__number">
+          </label>
+        </div>
+
+        <figure class="gallery__photo">
+          <p><img src="#" alt="Мост Дьявола" class="photo__img"></p>
+          <figcaption class="photo__head">Мост Дьявола</figcaption>
+        </figure>
+        <p class="photo-author">Автор фото: Антон</p>
+        <div class="like">
+          <label for="bridge">
+            <button type="button" class="like__btn"><img src="#" alt="лайк"></button>
+            <input type="text" name="bridge" id="bridge" placeholder="254" class="like__number">
+          </label>
+        </div>
+
+
+        <div class="video-wrap">
+          <b>все еще сомневаетесь?</b>
+          <p>Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a href="#" class="footer__contacts">#VisitSedona</a>
+      <ul class="footer__social">
+        <li class="footer__button">
+          <a href="#" aria-label="Твитер">
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer__button" aria-label="Фейсбук">
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer__button" aria-label="Ю-туб">
+          </a>
+        </li>
+      </ul>
+      <p class="footer__htmlacademy">Разработано</p>
+      <a href="https://htmlacademy.ru/intensive/htmlcss"></a>
+    </footer>
+  </div>
+
+
+</body>
+
+</html>

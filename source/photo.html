@@ -15,84 +15,84 @@
       <a href="index.html" class="page-header__logo">
         <img src="#" alt="Логотип города Седона" class="page-header__logo-img"> <!-- вставляем логотип -->
       </a>
-      <nav aria-label="Навигация по сайту" class="main-nav">
+      <nav class="main-nav" aria-label="Навигация по сайту">
         <button class="main-nav__toogle" type="button">Открыть меню сайта</button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
+          <ul class="main-nav__list site-list"> <!-- Я верно понимаю, что тут будет 2 блока? Один nav а второй ul, находящийся внутри nav-->
+            <li class="site-list__item site-list__item--active">
               <a href="#">Главная</a>
             </li>
-            <li class="main-nav__item--active">
+            <li class="site-list__item">
               <a href="photo.html">Фото и видео</a>
             </li>
-            <li class="main-nav__item">
+            <li class="site-list__item">
               <a href="form.html">Форма отзыва</a>
             </li>
-            <li class="main-nav__item">
+            <li class="site-list__item">
               <a href="https://up.htmlacademy.ru/adaptive/18">HTML ACADEMY</a>
             </li>
           </ul>
         </div>
       </nav>
-      <div class="welcome">
-        <img src="#" class="welcome__img--photo" alt="Добро пожаловать в Седону">
+      <div class="header__welcome header__welcome--page">
+        <img src="#" class="welcome__img" alt="Добро пожаловать в Седону">
       </div>
     </header>
 
     <section class="gallery">
       <h2 class="gallery__head">Фото и видео</h2>
       <p>не можете решиться на путешествие из-за курса? фотографии помогут вам забыть о политике и экономике</p>
-      <div class="photo-wrap">
+      <div class="gallery__wrap">
         <figure class="gallery__photo">
-          <p><img src="#" alt="неродные просторы" class="photo__img"></p>
-          <figcaption class="photo__head">Неродные просторы</figcaption>
+          <p><img src="#" alt="неродные просторы" class="gallery__item"></p>
+          <figcaption class="gallery__text">Неродные просторы</figcaption>
         </figure>
-        <p class="photo-author">Автор фото: Борис</p>
-        <div class="like">
+        <p class="gallery__author">Автор фото: Борис</p>
+        <div class="gallery__like">
           <label for="spaces">
-            <button type="button" class="like__btn"><img src="#" alt="лайк"></button>
-            <input type="text" name="spaces" id="spaces" placeholder="1350" class="like__number">
+            <button type="button" class="gallery__btn"><img src="#" alt="лайк"></button>
+            <input type="text" name="spaces" id="spaces" placeholder="1350" class="gallery__number">
           </label>
         </div>
 
         <figure class="gallery__photo">
-          <p><img src="#" alt="Местная растительность" class="photo__img"></p>
-          <figcaption class="photo__head">Местная растительность</figcaption>
+          <p><img src="#" alt="Местная растительность" class="gallery__item"></p>
+          <figcaption class="gallery__text">Местная растительность</figcaption>
         </figure>
-        <p class="photo-author">Автор фото: Сергей</p>
-        <div class="like">
+        <p class="gallery__author">Автор фото: Сергей</p>
+        <div class="gallery__like">
           <label for="grass">
-            <button type="button" class="like__btn"><img src="#" alt="лайк"></button>
-            <input type="text" name="grass" id="grass" placeholder="143" class="like__number">
+            <button type="button" class="gallery__btn"><img src="#" alt="лайк"></button>
+            <input type="text" name="grass" id="grass" placeholder="143" class="gallery__number">
           </label>
         </div>
 
         <figure class="gallery__photo">
-          <p><img src="#" alt="Дорога на север" class="photo__img"></p>
-          <figcaption class="photo__head">Дорога на север</figcaption>
+          <p><img src="#" alt="Дорога на север" class="gallery__item"></p>
+          <figcaption class="gallery__text">Дорога на север</figcaption>
         </figure>
-        <p class="photo-author">Автор фото: Петр</p>
-        <div class="like">
+        <p class="gallery__author">Автор фото: Петр</p>
+        <div class="gallery__like">
           <label for="road">
-            <button type="button" class="like__btn"><img src="#" alt="лайк"></button>
-            <input type="text" name="road" id="road" placeholder="96" class="like__number">
+            <button type="button" class="gallery__btn"><img src="#" alt="лайк"></button>
+            <input type="text" name="road" id="road" placeholder="96" class="gallery__number">
           </label>
         </div>
 
         <figure class="gallery__photo">
-          <p><img src="#" alt="Мост Дьявола" class="photo__img"></p>
-          <figcaption class="photo__head">Мост Дьявола</figcaption>
+          <p><img src="#" alt="Мост Дьявола" class="gallery__item"></p>
+          <figcaption class="gallery__text">Мост Дьявола</figcaption>
         </figure>
-        <p class="photo-author">Автор фото: Антон</p>
-        <div class="like">
+        <p class="gallery__author">Автор фото: Антон</p>
+        <div class="gallery__like">
           <label for="bridge">
-            <button type="button" class="like__btn"><img src="#" alt="лайк"></button>
-            <input type="text" name="bridge" id="bridge" placeholder="254" class="like__number">
+            <button type="button" class="gallery__btn"><img src="#" alt="лайк"></button>
+            <input type="text" name="bridge" id="bridge" placeholder="254" class="gallery__number">
           </label>
         </div>
 
 
-        <div class="video-wrap">
+        <div class="gallery__video">
           <b>все еще сомневаетесь?</b>
           <p>Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>

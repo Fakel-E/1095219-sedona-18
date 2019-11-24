@@ -15,87 +15,85 @@
       <a href="index.html" class="page-header__logo">
         <img src="#" alt="Логотип города Седона" class="page-header__logo-img"> <!-- вставляем логотип -->
       </a>
-      <nav aria-label="Навигация по сайту" class="main-nav">
+      <nav class="main-nav" aria-label="Навигация по сайту">
         <button class="main-nav__toogle" type="button">Открыть меню сайта</button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item--active">
+          <ul class="main-nav__list site-list"> <!-- Я верно понимаю, что тут будет 2 блока? Один nav а второй ul, находящийся внутри nav-->
+            <li class="site-list__item site-list__item--active">
               <a href="#">Главная</a>
             </li>
-            <li class="main-nav__item">
+            <li class="site-list__item">
               <a href="photo.html">Фото и видео</a>
             </li>
-            <li class="main-nav__item">
+            <li class="site-list__item">
               <a href="form.html">Форма отзыва</a>
             </li>
-            <li class="main-nav__item">
+            <li class="site-list__item">
               <a href="https://up.htmlacademy.ru/adaptive/18">HTML ACADEMY</a>
             </li>
           </ul>
         </div>
       </nav>
-      <div class="welcome">
+      <div class="header__welcome">
         <img src="#" class="welcome__img" alt="Добро пожаловать в Седону">
       </div>
     </header>
 
     <main class="page-main">
       <h1 class="visually-hidden">Туристический городок Седона</h1>
-
-
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
         <div class="features__wrap">
-          <p class="intro">Седона - небольшой городок в аризоне, заслуживающий большего!</p>
-          <p class="fraze">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон</p>
+          <p class="features__intro">Седона - небольшой городок в аризоне, заслуживающий большего!</p>
+          <p class="features__fraze">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон</p>
         </div>
         <div class="features__first">
-          <div class="first-text">
+          <div class="features__first-text">
             <h3>Настоящий городок</h3>
             <p>- № 1 -</p>
             <p>Седона - не атракцион для туристов. Там течет своя жизнь</p>
           </div>
-          <div class="first-img">
-            <img class="first-img__sedona" src="#" alt="Фотография города Седона">
+          <div class="features__first-img">
+            <img class="features__img-sedona" src="#" alt="Фотография города Седона">
           </div>
         </div>
         <ul class="features__list">
           <li class="features__item">
-            <h3 class="home">Жильё</h3>
+            <h3 class="features__home">Жильё</h3>
             <p>рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
           <li class="features__item">
-            <h3 class="food">Еда</h3>
+            <h3 class="features__food">Еда</h3>
             <p>всегда заказываёте фирменный бургер, вы не разочаруетесь</p>
           </li>
           <li class="features__item">
-            <h3 class="box">Сувениры</h3>
+            <h3 class="features__box">Сувениры</h3>
             <p>не только китайского, но и местного производства</p>
           </li>
         </ul>
         <div class="features__second">
-          <div class="second-img">
-            <img class="second-img__bridge" src="img/devilbridge.jpg" alt="Фотография моста дьявола" width="800"
+          <div class="features__second-img">
+            <img class="features__img-bridge" src="img/devilbridge.jpg" alt="Фотография моста дьявола" width="800"
               height="400">
           </div>
-          <div class="second-text">
+          <div class="features__second-text">
             <h3>Там есть <br> мост дьявола</h3>
             <p>- № 2 -</p>
             <p>Да, по нему можно пройти! если конечно вы осмелитесь</p>
           </div>
         </div>
-        <ul class="features__list grey">
-          <li class="features__item">
+        <ul class="features__list features__list--grey">
+          <li class="features__item features__item--grey">
             <h3>небольшая площадь</h3>
             <p>- № 3 -</p>
             <p>все достопримечательности находятся очень близко</p>
           </li>
-          <li class="features__item">
+          <li class="features__item features__item--grey">
             <h3>красивая дорога</h3>
             <p>- № 4 -</p>
             <p>ехать в седону из лас-вегаса совсем не скучно</p>
           </li>
-          <li class="features__item">
+          <li class="features__item features__item--grey">
             <h3>мало туристов</h3>
             <p>- № 5 -</p>
             <p>большинство едет в грандканьон и толпится там</p>
@@ -108,10 +106,10 @@
         <p class="search__fraze">укажите предполагаемые даты поездки, и мы покажем вам лучшие предпожения гостиниц в
           Седоне</p>
         <div class="search__wrap">
-          <a href="search.html" class="wrap__btn">Найти гостиницу</a>
+          <a href="search.html" class="search__btn">Найти гостиницу</a>
         </div>
-
       </section>
+
       <section class="map">
         <h2 class="visually-hidden">Карта Седоны</h2>
         <iframe
@@ -121,21 +119,16 @@
     </main>
 
     <footer class="footer">
-
       <a href="#" class="footer__contacts">#VisitSedona</a>
-
       <ul class="footer__social">
         <li class="footer__button">
-          <a href="#" aria-label="Твитер">
-          </a>
+          <a href="#" aria-label="Твитер"></a>
         </li>
         <li>
-          <a href="#" class="footer__button" aria-label="Фейсбук">
-          </a>
+          <a href="#" class="footer__button" aria-label="Фейсбук"></a>
         </li>
         <li>
-          <a href="#" class="footer__button" aria-label="Ю-туб">
-          </a>
+          <a href="#" class="footer__button" aria-label="Ю-туб"></a>
         </li>
       </ul>
       <p class="footer__htmlacademy">Разработано</p>

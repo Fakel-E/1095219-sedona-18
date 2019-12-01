@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <link> <!-- Здесь подключаем шрифты -->
-  <link> <!-- Здесь подключаем normalize, если потребуется -->
-  <link> <!-- Здесь подключаем style.css -->
+  <!-- <link> Здесь подключаем шрифты -->
+  <!-- <link> Здесь подключаем normalize, если потребуется -->
+  <!-- <link> Здесь подключаем style.css -->
 </head>
 
 <body>
@@ -34,78 +34,81 @@
           </ul>
         </div>
       </nav>
-      <div class="welcome">
-        <img src="#" class="welcome__img--photo" alt="Добро пожаловать в Седону">
+      <div class="page-header__welcome page-header__welcome--page">
+        <img src="#" class="page-header__img" alt="Добро пожаловать в Седону">
       </div>
     </header>
+
     <section class="recall">
       <h3 class="recall__head">Оставьте свой отзыв</h3>
       <p class="recall__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещеных вами достопримечательностях</p>
-      <form class="recall__form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset>
-        <legend>Представьтесь</legend>
-          <p class="">
-            <label for="">Имя*</label>
-            <input type="text" name="" id="" placeholder="Петр" class="">
+      <form class="recall__form form" action="https://echo.htmlacademy.ru" method="post">
+
+        <fieldset class="form__name">
+        <legend class="form__head">Представьтесь</legend>
+          <p class="form__wrap">
+            <label for="name" class="form__text">Имя*</label>
+            <input type="text" name="name" id="name" placeholder="Петр" class="form__enter">
           </p>
-          <p class="">
-            <label for="">Фамилия*</label>
-            <input type="text" name="" id="" placeholder="Иванов" class="">
+          <p class="form__wrap">
+            <label for="surname" class="form__text">Фамилия*</label>
+            <input type="text" name="surname" id="surname" placeholder="Иванов" class="form__enter">
           </p>
-          <p class="">
-            <label for="">Отчество</label>
-            <input type="text" name="" id="" placeholder="Александрович" class="">
-          </p>
-        </fieldset>
-        <fieldset>
-          <legend>Контактная информация:</legend>
-          <p class="">
-            <label for="">Контактный телефон*:</label>
-            <input type="text" name="" id="" placeholder="Введите телефон" class="">
-          </p>
-          <p class="">
-            <label for="">Электронная почта*:</label>
-            <input type="text" name="" id="" placeholder="Введите e-mail" class="">
+          <p class="form__wrap">
+            <label for="parent" class="form__text">Отчество</label>
+            <input type="text" name="parent" id="parent" placeholder="Александрович" class="form__enter">
           </p>
         </fieldset>
 
-        <fieldset class="opinion">
-          <legend>Ваше общее впечатление:</legend>
-          <p>
-            <input class="opinion__option" type="radio" name="opinion" id="good" placeholder="Скорее положительное" checked>
-            <label for="good" class="opinion__name">Скорее положительное</label>
+        <fieldset class="form__contacts">
+          <legend class="form__head">Контактная информация:</legend>
+          <p class="form__wrap form__wrap--contacts">
+            <label for="phone" class="form__text">Контактный телефон*:</label>
+            <input type="text" name="phone" id="phone" placeholder="Введите телефон" class="form__enter">
           </p>
-          <p>
-            <input class="opinion__option" type="radio" name="opinion" id="bad" placeholder="Скорее отрицательное">
-            <label for="bad" class="opinion__name">Скорее отрицательное</label>
-          </p>
-          <p>
-            <input class="opinion__option" type="radio" name="opinion" id="not-answer" placeholder="Затрудняюсь ответить">
-            <label for="not-answer" class="opinion__name">Затрудняюсь ответить</label>
+          <p class="form__wrap form__wrap--contacts">
+            <label for="mail" class="form__text">Электронная почта*:</label>
+            <input type="text" name="mail" id="mail" placeholder="Введите e-mail" class="form__enter">
           </p>
         </fieldset>
-        <fieldset>
-          <legend>Посещенные достопримечательности:</legend>
-          <p>
-            <input type="checkbox" name="attractions" id="bridge" checked>
-            <label for="bridge">Мост Дьявола</label>
+
+        <fieldset class="form__opinion">
+          <legend class="form__head">Ваше общее впечатление:</legend>
+          <p class="form__wrap form__wrap--opinion">
+            <input type="radio" name="opinion" id="good" checked class="form__item">
+            <label for="good" class="form__opinion-text">Скорее положительное</label>
           </p>
-          <p>
-            <input type="checkbox" name="attractions" id="hill" checked>
-            <label for="hill">Гора-Колокол</label>
+          <p class="form__wrap form__wrap--opinion">
+            <input type="radio" name="opinion" id="bad" class="form__item">
+            <label for="bad" class="form__opinion-text">Скорее отрицательное</label>
           </p>
-          <p>
-            <input type="checkbox" name="attractions" id="park" checked>
-            <label for="park">Слайд-парк</label>
-          </p>
-          <p>
-            <input type="checkbox" name="attractions" id="mountain">
-            <label for="mountain">Красные скалы</label>
+          <p class="form__wrap form__wrap--opinion">
+            <input type="radio" name="opinion" id="not-answer" class="form__item">
+            <label for="not-answer" class="form__opinion-text">Затрудняюсь ответить</label>
           </p>
         </fieldset>
-        <fieldset>
-          <legend>Опишите свои эмоции</legend>
-          <textarea name="" id="" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+        <fieldset class="form__attractions">
+          <legend class="form__head">Посещенные достопримечательности:</legend>
+          <p class="form__wrap form__wrap--attractions">
+            <input type="checkbox" name="attractions" id="bridge" checked class="form__check">
+            <label for="bridge" class="form__opinion-text">Мост Дьявола</label>
+          </p>
+          <p class="form__wrap form__wrap--attractions">
+            <input type="checkbox" name="attractions" id="hill" checked class="form__check">
+            <label for="hill" class="form__opinion-text">Гора-Колокол</label>
+          </p>
+          <p class="form__wrap form__wrap--attractions">
+            <input type="checkbox" name="attractions" id="park" checked class="form__check">
+            <label for="park" class="form__opinion-text">Слайд-парк</label>
+          </p>
+          <p class="form__wrap form__wrap--attractions">
+            <input type="checkbox" name="attractions" id="mountain" class="form__check">
+            <label for="mountain" class="form__opinion-text">Красные скалы</label>
+          </p>
+        </fieldset>
+        <fieldset class="form__emotion">
+          <legend class="form__head">Опишите свои эмоции</legend>
+          <textarea name="emotion-text" id="emotion-text" cols="30" rows="10" placeholder="Опишите подробно все свои восторги" class="form__emotion-text"></textarea>
         </fieldset>
         <button type="submit">Отправить отзыв</button>
       </form>
@@ -116,16 +119,13 @@
       <a href="#" class="footer__contacts">#VisitSedona</a>
       <ul class="footer__social">
         <li class="footer__button">
-          <a href="#" aria-label="Твитер">
-          </a>
+          <a href="#" aria-label="Твитер"></a>
         </li>
         <li>
-          <a href="#" class="footer__button" aria-label="Фейсбук">
-          </a>
+          <a href="#" class="footer__button" aria-label="Фейсбук"></a>
         </li>
         <li>
-          <a href="#" class="footer__button" aria-label="Ю-туб">
-          </a>
+          <a href="#" class="footer__button" aria-label="Ю-туб"></a>
         </li>
       </ul>
       <p class="footer__htmlacademy">Разработано</p>

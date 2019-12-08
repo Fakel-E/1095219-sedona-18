@@ -4,38 +4,37 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <link> <!-- Здесь подключаем шрифты -->
-  <link> <!-- Здесь подключаем normalize, если потребуется -->
-  <link> <!-- Здесь подключаем style.css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link> Здесь подключаем normalize, если потребуется -->
 </head>
 
 <body>
   <div class="container-center">
     <header class="page-header">
       <a href="index.html" class="page-header__logo">
-        <img src="#" alt="Логотип города Седона" class="page-header__logo-img"> <!-- вставляем логотип -->
+        <img src="img/logo-sedona-mobile.svg" alt="Логотип города Седона" class="page-header__logo-img">
       </a>
       <nav class="main-nav" aria-label="Навигация по сайту">
-        <button class="main-nav__toogle" type="button">Открыть меню сайта</button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list"> <!-- Я верно понимаю, что тут будет 2 блока? Один nav а второй ul, находящийся внутри nav-->
-            <li class="site-list__item site-list__item--active">
-              <a href="#">Главная</a>
+          <ul class="main-nav__list site-list">
+            <li>
+              <a href="#" class="site-list__item site-list__item--active"> <!--в данном случае, кому правильнее присваивать класс? а или li?  -->Главная</a>
             </li>
-            <li class="site-list__item">
-              <a href="photo.html">Фото и видео</a>
+            <li>
+              <a href="photo.html"  class="site-list__item">Фото и видео</a>
             </li>
-            <li class="site-list__item">
-              <a href="form.html">Форма отзыва</a>
+            <li>
+              <a href="form.html" class="site-list__item">Форма отзыва</a>
             </li>
-            <li class="site-list__item">
-              <a href="https://up.htmlacademy.ru/adaptive/18">HTML ACADEMY</a>
+            <li>
+              <a href="https://up.htmlacademy.ru/adaptive/18"  class="site-list__item">HTML ACADEMY</a>
             </li>
           </ul>
         </div>
+        <button class="main-nav__toogle" type="button">Открыть меню сайта</button>
       </nav>
-      <div class="header__welcome">
-        <img src="#" class="welcome__img" alt="Добро пожаловать в Седону">
+      <div class="page-header__welcome">
+        <img src="img/text-sedona-index.svg" class="page-header__img" alt="Добро пожаловать в Седону">
       </div>
     </header>
 
@@ -54,7 +53,7 @@
             <p>Седона - не атракцион для туристов. Там течет своя жизнь</p>
           </div>
           <div class="features__first-img">
-            <img class="features__img-sedona" src="#" alt="Фотография города Седона">
+            <img class="features__img-sedona" src="img/main-city-mobile@1x.jpg" alt="Фотография города Седона">
           </div>
         </div>
         <ul class="features__list">
@@ -64,7 +63,7 @@
           </li>
           <li class="features__item">
             <h3 class="features__food">Еда</h3>
-            <p>всегда заказываёте фирменный бургер, вы не разочаруетесь</p>
+            <p>всегда заказывайте фирменный бургер, вы не разочаруетесь</p>
           </li>
           <li class="features__item">
             <h3 class="features__box">Сувениры</h3>
@@ -73,8 +72,7 @@
         </ul>
         <div class="features__second">
           <div class="features__second-img">
-            <img class="features__img-bridge" src="img/devilbridge.jpg" alt="Фотография моста дьявола" width="800"
-              height="400">
+            <img class="features__img-bridge" src="img/photo-bridge-mobile@1x.jpg" alt="Фотография моста дьявола">
           </div>
           <div class="features__second-text">
             <h3>Там есть <br> мост дьявола</h3>
@@ -122,13 +120,13 @@
       <a href="#" class="footer__contacts">#VisitSedona</a>
       <ul class="footer__social">
         <li class="footer__button">
-          <a href="#" aria-label="Твитер"></a>
+          <a href="#" aria-label="Твитер">Твитер</a>
         </li>
         <li>
-          <a href="#" class="footer__button" aria-label="Фейсбук"></a>
+          <a href="#" class="footer__button" aria-label="Фейсбук">Фейсбук</a>
         </li>
         <li>
-          <a href="#" class="footer__button" aria-label="Ю-туб"></a>
+          <a href="#" class="footer__button" aria-label="Ю-туб">Ю-туб</a>
         </li>
       </ul>
       <p class="footer__htmlacademy">Разработано</p>

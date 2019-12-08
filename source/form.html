@@ -4,63 +4,64 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <!-- <link> Здесь подключаем шрифты -->
+  <link rel="stylesheet" href="css/style.css">
   <!-- <link> Здесь подключаем normalize, если потребуется -->
-  <!-- <link> Здесь подключаем style.css -->
 </head>
 
 <body>
   <div class="container-center">
-    <header class="page-header">
-      <a href="index.html" class="page-header__logo">
-        <img src="#" alt="Логотип города Седона" class="page-header__logo-img"> <!-- вставляем логотип -->
-      </a>
-      <nav aria-label="Навигация по сайту" class="main-nav">
-        <button class="main-nav__toogle" type="button">Открыть меню сайта</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="#">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="photo.html">Фото и видео</a>
-            </li>
-            <li class="main-nav__item--active">
-              <a href="form.html">Форма отзыва</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="https://up.htmlacademy.ru/adaptive/18">HTML ACADEMY</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div class="page-header__welcome page-header__welcome--page">
-        <img src="#" class="page-header__img" alt="Добро пожаловать в Седону">
-      </div>
-    </header>
+      <header class="page-header">
+          <a href="index.html" class="page-header__logo">
+            <img src="img/logo-sedona-mobile.svg" alt="Логотип города Седона" class="page-header__logo-img"> <!-- вставляем логотип -->
+          </a>
+          <nav class="main-nav" aria-label="Навигация по сайту">
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list site-list"> <!-- Я верно понимаю, что тут будет 2 блока? Один nav а второй ul, находящийся внутри nav-->
+                <li>
+                  <a href="#" class="site-list__item ">Главная</a>
+                </li>
+                <li>
+                  <a href="photo.html" class="site-list__item">Фото и видео</a>
+                </li>
+                <li>
+                  <a href="form.html" class="site-list__item site-list__item--active">Форма отзыва</a>
+                </li>
+                <li>
+                  <a href="https://up.htmlacademy.ru/adaptive/18" class="site-list__item">HTML ACADEMY</a>
+                </li>
+              </ul>
+            </div>
+            <button class="main-nav__toogle" type="button">Открыть меню сайта</button>
+          </nav>
+          <div class="page-header__welcome page-header__welcome--page">
+            <img src="img/text-sedona.svg" class="page-header__img" alt="Добро пожаловать в Седону">
+          </div>
+      </header>
+
 
     <section class="recall">
       <h3 class="recall__head">Оставьте свой отзыв</h3>
       <p class="recall__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещеных вами достопримечательностях</p>
       <form class="recall__form form" action="https://echo.htmlacademy.ru" method="post">
-
-        <fieldset class="form__name">
+      <div class="form__frame">
+        <fieldset class="form__block">
         <legend class="form__head">Представьтесь</legend>
           <p class="form__wrap">
-            <label for="name" class="form__text">Имя*</label>
+            <label for="name" class="form__text">Имя*:</label>
             <input type="text" name="name" id="name" placeholder="Петр" class="form__enter">
           </p>
           <p class="form__wrap">
-            <label for="surname" class="form__text">Фамилия*</label>
+            <label for="surname" class="form__text">Фамилия*:</label>
             <input type="text" name="surname" id="surname" placeholder="Иванов" class="form__enter">
           </p>
           <p class="form__wrap">
-            <label for="parent" class="form__text">Отчество</label>
+            <label for="parent" class="form__text">Отчество:</label>
             <input type="text" name="parent" id="parent" placeholder="Александрович" class="form__enter">
           </p>
         </fieldset>
-
-        <fieldset class="form__contacts">
+      </div>
+      <div class="form__frame">
+        <fieldset class="form__block">
           <legend class="form__head">Контактная информация:</legend>
           <p class="form__wrap form__wrap--contacts">
             <label for="phone" class="form__text">Контактный телефон*:</label>
@@ -71,8 +72,9 @@
             <input type="text" name="mail" id="mail" placeholder="Введите e-mail" class="form__enter">
           </p>
         </fieldset>
-
-        <fieldset class="form__opinion">
+      </div>
+      <div class="form__frame">
+        <fieldset class="form__block">
           <legend class="form__head">Ваше общее впечатление:</legend>
           <p class="form__wrap form__wrap--opinion">
             <input type="radio" name="opinion" id="good" checked class="form__item">
@@ -87,7 +89,9 @@
             <label for="not-answer" class="form__opinion-text">Затрудняюсь ответить</label>
           </p>
         </fieldset>
-        <fieldset class="form__attractions">
+      </div>
+      <div class="form__frame">
+        <fieldset class="form__block">
           <legend class="form__head">Посещенные достопримечательности:</legend>
           <p class="form__wrap form__wrap--attractions">
             <input type="checkbox" name="attractions" id="bridge" checked class="form__check">
@@ -106,13 +110,33 @@
             <label for="mountain" class="form__opinion-text">Красные скалы</label>
           </p>
         </fieldset>
-        <fieldset class="form__emotion">
+      </div>
+      <div class="form__frame">
+        <fieldset class="form__block">
           <legend class="form__head">Опишите свои эмоции</legend>
           <textarea name="emotion-text" id="emotion-text" cols="30" rows="10" placeholder="Опишите подробно все свои восторги" class="form__emotion-text"></textarea>
         </fieldset>
-        <button type="submit">Отправить отзыв</button>
+      </div>
+      <div class="form__btn">
+        <button type="submit" class="form__btn--send">Отправить отзыв</button>
+      </div>
       </form>
     </section>
+    <div class="popup">
+      <div class="popup__fail">
+        <p class="popup__head">Что-то пошло не так!</p>
+        <p class="popup__text">Проверьте поля, выделенные красным. Скорее всего вы забыли их заполнить</p>
+        <button type="button" class="popup__fail-btn">ОК</button>
+      </div>
+      <div class="popup__succes">
+        <p class="popup__head">Ваш отзыв отправлен!</p>
+        <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        <div class="popup__btn-wrap">
+          <button type="button" class="popup__ok-btn">закрыть окно</button>
+        </div>
+      </div>
+
+    </div>
 
 
     <footer class="footer">

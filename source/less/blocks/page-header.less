@@ -1,0 +1,39 @@
+.page-header {
+  padding: 16px 0;
+}
+
+.page-header__logo {
+  height: 71px;
+  width: 140px;
+  padding: 0;
+  margin: 0;
+  /*position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -70px;
+	z-index: 1;*/
+}
+
+.page-header__welcome {
+  position: relative;
+  background-color: #ffffff;
+  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  /*background-position: right 0px top -61px;*/
+  background-repeat: no-repeat;
+  background-size: 1200px 800px;
+  padding-bottom: 76px;
+}
+
+.page-header__img {
+  display: block;
+  padding-top: 77px;
+}
+
+.page-header__welcome::after {
+  content: url("../../img/bg-intro-triangle-mobile.svg");
+  /*position: absolute;*/
+  left: 0;
+  bottom: 0;
+  line-height: 0;
+  z-index: 1;
+}

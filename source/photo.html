@@ -11,9 +11,6 @@
 <body>
   <div class="container-center">
     <header class="page-header">
-      <a href="index.html" class="page-header__logo">
-        <img src="img/logo-sedona-mobile.svg" alt="Логотип города Седона" class="page-header__logo-img"> <!-- вставляем логотип -->
-      </a>
       <nav class="main-nav" aria-label="Навигация по сайту">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list"> <!-- Я верно понимаю, что тут будет 2 блока? Один nav а второй ul, находящийся внутри nav-->
@@ -31,8 +28,11 @@
             </li>
           </ul>
         </div>
-        <button class="main-nav__toogle" type="button">Открыть меню сайта</button>
+        <button class="main-nav__toogle" type="button">Меню</button>
       </nav>
+      <a href="index.html" class="page-header__logo">
+        <img src="img/logo-sedona-mobile.svg" alt="Логотип города Седона" class="page-header__logo-img"> <!-- вставляем логотип -->
+      </a>
       <div class="page-header__welcome page-header__welcome--page">
         <img src="img/text-sedona.svg" class="page-header__img" alt="Добро пожаловать в Седону">
       </div>
@@ -42,7 +42,7 @@
       <h2 class="gallery__head">Фото и видео</h2>
       <p class="gallery__description">не можете решиться на путешествие из-за курса? фотографии помогут вам забыть о политике и экономике</p>
       <div class="gallery__wrap">
-        <div class="gallery__photo">
+        <div class="gallery__photo gallery__photo--tablet">
           <figure>
             <p><img src="img/photo-sunset-mobile@1x.jpg" alt="неродные просторы" class="gallery__item"></p>
             <figcaption class="gallery__text">Неродные просторы</figcaption>

@@ -1,3 +1,8 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
 .form__block {
   border: none;
 }
@@ -7,6 +12,7 @@
   padding-top: 25px;
   padding-left: 20px;
   padding-right: 20px;
+  min-width: 320px;
 }
 
 .form__head {
@@ -55,4 +61,62 @@
 
 .form__btn {
   margin-left: 100px;
+}
+
+@media (min-width: @tablet-w) {
+  .form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .form__frame {
+    min-width: 324px;
+    padding: 0;
+    margin: 0;
+  }
+  .form__attractions-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 648px;
+  }
+  .form__wrap--attractions {
+    display: inline-block;
+    min-width: 324px;
+  }
+  .form__frame--tablet {
+    order: -1;
+  }
+  .form__block--tablet {
+    min-width: 648px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .form__emotion-text {
+    min-width: 648px;
+  }
+}
+
+@media (min-width: @desktop-w) {
+  .form {
+    min-width: 1200px;
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+  .form__frame {
+    min-width: 480px;
+  }
+  .form__attractions-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 960px;
+  }
+  .form__wrap--attractions {
+    min-width: 259px;
+  }
+  .form__emotion-text {
+    min-width: 960px;
+  }
 }

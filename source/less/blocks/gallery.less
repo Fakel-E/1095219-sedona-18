@@ -49,11 +49,12 @@
   используется позже
 }*/
 
-@media (min-width: @tablet-w){
+@media (min-width: @tablet-w) {
   .gallery {
     display: flex;
     flex-direction: row;
   }
+
   .gallery__wrap {
     min-width: 648px;
     box-sizing: border-box;
@@ -61,20 +62,23 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
   .gallery__photo {
     border: none;
     min-width: 328px;
   }
+
   .gallery__photo--tablet {
     min-width: 648px;
   }
 }
 
-@media (min-width: @desktop-w){
+@media (min-width: @desktop-w) {
   .gallery {
     display: flex;
     flex-direction: row;
   }
+
   .gallery__wrap {
     min-width: 1200px;
     box-sizing: border-box;
@@ -82,10 +86,12 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
   .gallery__photo {
     border: none;
     min-width: 400px;
   }
+
   .gallery__photo--tablet {
     min-width: 1200px;
   }

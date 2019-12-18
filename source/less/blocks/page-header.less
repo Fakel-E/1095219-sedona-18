@@ -1,15 +1,17 @@
 .page-header {
-  padding: 16px 0;
+  padding: 0;
+  margin: 0;
 }
 
 .page-header__logo {
+  display: inline-block;
   margin: 0 auto;
   padding: 0;
-  /*position: absolute;
-	/*top: 0;
-	left: 50%;
-	margin-left: -70px;
-	z-index: 1;*/
+  position: absolute;
+  //top: 0;
+  //left: 50%;
+  margin-left: 110px;
+  z-index: 1;
 }
 
 .page-header__logo-img {
@@ -21,7 +23,7 @@
   position: relative;
   background-color: @back-col;
   background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: right 0 top 0;
+  background-position: right -219px top -15px;
   background-repeat: no-repeat;
   background-size: 768px 389px;
   padding-bottom: 76px;
@@ -37,9 +39,9 @@
 
 .page-header__welcome::after {
   content: url("../img/bg-intro-triangle-mobile.svg");
-  /*position: absolute;*/
+  position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px; //Проблема. Не могу понять, почему треугольник меняет свой размер, если его поднять на пиксель выше.
   line-height: 0;
   z-index: 1;
 }

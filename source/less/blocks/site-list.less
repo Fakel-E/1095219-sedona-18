@@ -3,11 +3,10 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
   margin: 0;
   padding: 0;
   width: 100%;
-  padding-left: 90px;
-  padding-right: 90px;
   font-weight: 700;
   color: @back-col;
   background-color: @back-text;
@@ -17,6 +16,12 @@
 
 .site-list__item {
   color: @back-col;
+}
+
+.site-list li {
+  width: 100%;
+  border-bottom: 1px solid @menu-line;
+  text-align: center;
 }
 
 @media (min-width: @tablet-w) {

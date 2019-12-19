@@ -27,6 +27,11 @@
   background-repeat: no-repeat;
   background-size: 768px 389px;
   padding-bottom: 76px;
+
+  &--photo {
+    padding-bottom: 0;
+    background-position: right -110px top -165px;
+  }
 }
 
 .page-header__img {
@@ -35,13 +40,17 @@
   margin: 0 auto;
   width: 280px;
   height: 216px;
+
+  &--photo {
+    padding-top: 0;
+  }
 }
 
 .page-header__welcome::after {
   content: url("../img/bg-intro-triangle-mobile.svg");
   position: absolute;
   left: 0;
-  bottom: -1px; //Проблема. Не могу понять, почему треугольник меняет свой размер, если его поднять на пиксель выше.
+  bottom: -0.5px; //Проблема. Не могу понять, почему треугольник меняет свой размер, если его поднять на пиксель выше.
   line-height: 0;
   z-index: 1;
 }
@@ -55,18 +64,40 @@
     background-repeat: no-repeat;
     background-size: 768px 518px;
     padding-bottom: 76px;
+
+    &--photo {
+      padding-bottom: 0;
+      background-position: right 0 top -170px;
+    }
+  }
+
+
+
+  .page-header__logo {
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    top: 8px;
+    left: 45%;
+    //margin-top: -15px;
+    //margin-left: 340px;
+    z-index: 1;
   }
 
   .page-header__img {
     width: 461px;
     height: 346px;
+
+    &--photo {
+      padding-top: 0;
+    }
   }
 
   .page-header__welcome::after {
     content: url("../img/bg-intro-triangle-tablet.svg");
     /*position: absolute;*/
     left: 0;
-    bottom: 0;
+    bottom: -1.5px;
     line-height: 0;
     z-index: 1;
   }
@@ -85,10 +116,17 @@
 
   .page-header__welcome::after {
     content: url("../img/bg-intro-triangle-desktop.svg");
-    /*position: absolute;*/
+    position: absolute;
     left: 0;
     bottom: 0;
     line-height: 0;
+    z-index: 1;
+  }
+
+  .page-header__logo {
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
     z-index: 1;
   }
 }

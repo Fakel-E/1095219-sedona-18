@@ -8,13 +8,6 @@
   margin-top: 40px;
 }
 
-@media (min-width: @tablet-w) {
-  .footer {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
 .footer__contacts {
   font-size: 21px;
   line-height: 26px;
@@ -82,3 +75,28 @@
 	fill: #bdbbbc;
 }
 */
+
+@media (min-width: @tablet-w) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer__contacts {
+    margin-left: 60px;
+  }
+
+  .footer__htmlacademy-wrap {
+    margin-right: 60px;
+  }
+}
+
+@media (min-width: @desktop-w) {
+  .footer__contacts {
+    margin-left: 120px;
+  }
+
+  .footer__htmlacademy-wrap {
+    margin-right: 120px;
+  }
+}

@@ -44,7 +44,7 @@
   padding: 0;
   padding-top: 23px;
   padding-bottom: 44px;
-  min-width: 320px;
+  max-width: 320px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -120,6 +120,10 @@
   }
 }
 
+.features__item p {
+  color: @text-col;
+}
+
 .features__home,
 .features__food,
 .features__box {
@@ -150,15 +154,72 @@
 }*/
 
 @media (min-width: @tablet-w) {
+  .features__wrap::after {
+    content: url("");
+  }
+
   .features__first {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    min-width: 100%;
   }
 
   .features__first-text {
-    min-width: 256px;
+    width: 256px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    box-sizing: border-box;
+  }
+
+  .features__first-text p{
+    margin-left: 48px;
+    margin-right: 45px;
+  }
+
+  .features__first-img {
+    min-width: 512px;
+  }
+
+  .features__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+
+    &--grey {
+      background-color: @back-gr;
+      padding: 0;
+    }
+  }
+
+  .features__item {
+    position: relative;
+    max-width: 33.33%;
+    text-align: center;
+    margin: 0;
+
+    &--grey {
+      background-color: @back-gr;
+      padding-top: 0;
+      padding-bottom: 20px;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center;
+      border-bottom: none;
+    }
+  }
+
+  .features__item p {
+    margin-left: 50px;
+    margin-right: 43px;
+  }
+
+  .features__item--grey p {
+    margin-left: 48px;
+    margin-right: 50px;
   }
 
   .features__second {
@@ -167,8 +228,15 @@
     flex-direction: row;
   }
 
+  .features__second-img {
+    position: relative;
+    overflow: hidden;
+    width: 512px;
+    height: 260px;
+  }
+
   .features__second-text {
-    min-width: 256px;
+    max-width: 256px;
   }
 
   .features__list {
@@ -182,12 +250,20 @@
     min-width: 400px;
   }
 
+  .features__first-img {
+    min-width: 800px;
+  }
+
   .features__second-text {
     min-width: 400px;
   }
+
+  .features__second-img {
+    min-width: 800px;
+  }
 }
 /*
-.features-item h3 {
+.features__item h3 {
 	font-size: 21px;
 	line-height: 21px;
 	padding: 0;
@@ -197,7 +273,7 @@
 	margin-bottom: 20px;
 }
 
-.features-item p {
+.features__item p {
 	color: #333333;
 	margin-top: 24px;
 	margin-right: 50px;

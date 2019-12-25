@@ -6,6 +6,7 @@
 .form__block {
   border: none;
   padding: 0;
+  margin: 0;
 }
 
 .form__frame {
@@ -75,6 +76,94 @@
     background-image: url("../img/icon-mail.svg");
     background-repeat: no-repeat;
     background-position: right;
+  }
+}
+
+.form__item {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form__item + .form__opinion-text {
+  position: relative;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 73px;
+  margin-bottom: 35px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    top: -15px;
+    left: -73px;
+    border: 1px solid @body-col;
+    border-radius: 50%;
+    background-color: @body-col;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -54px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background: @text-col;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+}
+
+.form__item:checked + .form__opinion-text {
+  &::after {
+    opacity: 1;
+  }
+}
+
+.form__check {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.form__check + .form__opinion-text {
+  position: relative;
+  cursor: pointer;
+  margin-left: 73px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    top: -15px;
+    left: -73px;
+    border: 1px solid @body-col;
+    border-radius: 10%;
+    background-color: @body-col;
+  }
+
+  &::after {
+    content: url("../img/icon-tick.svg");
+    position: absolute;
+    width: 26px;
+    height: 17px;
+    top: 0;
+    left: -55px;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+}
+
+.form__check:checked + .form__opinion-text {
+  &::after {
+    opacity: 1;
   }
 }
 
@@ -175,9 +264,9 @@
 
 @media (min-width: @desktop-w) {
   .form {
-    min-width: 1200px;
-    margin-left: 120px;
-    margin-right: 120px;
+    min-width: 960px;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .form__frame {
@@ -185,6 +274,12 @@
   }
 
   .form__enter {
+    width: 350px;
+
+    &--second {
+      width: 312px;
+    }
+
     &--phone {
       width: 320px;
     }
@@ -193,6 +288,11 @@
       width: 320px;
     }
   }
+
+  .form__text {
+    margin-right: 16px;
+  }
+
 
   .form__attractions-wrap {
     display: flex;
@@ -208,6 +308,10 @@
 
     &--contacts {
       width: 420px;
+    }
+
+    &--desktop {
+      flex-wrap: nowrap;
     }
   }
 

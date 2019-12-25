@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- <link> Здесь подключаем normalize, если потребуется -->
 </head>
 
 <body>
@@ -33,7 +32,7 @@
       <a href="index.html" class="page-header__logo">
         <img src="img/logo-sedona-mobile.svg" width="103" height="83" alt="Логотип города Седона" class="page-header__logo-img">
       </a>
-      <button class="main-nav__toogle" type="button">Меню</button>
+      <button class="page-header__toggle" type="button">Меню</button>
       <div class="page-header__welcome page-header__welcome--form">
         <img src="img/text-sedona.svg" class="page-header__img page-header__img--form" alt="Добро пожаловать в Седону">
       </div>
@@ -47,15 +46,15 @@
       <div class="form__frame">
         <fieldset class="form__block">
         <legend class="form__head">Представьтесь</legend>
-          <p class="form__wrap">
+          <p class="form__wrap form__wrap--desktop">
             <label for="name" class="form__text">Имя*:</label>
             <input type="text" name="name" id="name" placeholder="Петр" class="form__enter">
           </p>
-          <p class="form__wrap">
+          <p class="form__wrap form__wrap--desktop">
             <label for="surname" class="form__text">Фамилия*:</label>
             <input type="text" name="surname" id="surname" placeholder="Иванов" class="form__enter form__enter--second">
           </p>
-          <p class="form__wrap">
+          <p class="form__wrap form__wrap--desktop">
             <label for="parent" class="form__text">Отчество:</label>
             <input type="text" name="parent" id="parent" placeholder="Александрович" class="form__enter form__enter--second">
           </p>

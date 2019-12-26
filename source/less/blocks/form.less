@@ -218,6 +218,11 @@
     margin: 0;
   }
 
+  .form__head:nth-child(4) {
+    min-width: 648px;
+    text-align: center;
+  } //Вопрос. Почему не работает выбор элемента?
+
   .form__enter {
     &--phone {
       width: 648px;
@@ -228,15 +233,44 @@
     }
   }
 
+  .form__check + .form__opinion-text {
+    margin-left: 73px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      top: -15px;
+      left: -73px;
+      border: 1px solid @body-col;
+      border-radius: 10%;
+      background-color: @body-col;
+    }
+
+    &::after {
+      content: url("../img/icon-tick.svg");
+      position: absolute;
+      width: 26px;
+      height: 17px;
+      top: 0;
+      left: -55px;
+      opacity: 0;
+      transition: all 0.2s;
+    }
+  }
+
   .form__attractions-wrap {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     min-width: 648px;
+    padding-left: 80px;
   }
 
   .form__wrap--attractions {
-    display: inline-block;
     max-width: 324px;
   }
 
@@ -253,7 +287,7 @@
 
   .form__wrap {
     &--opinion {
-      margin-bottom: 64px;
+      margin-bottom: 20px;
     }
   }
 
@@ -299,11 +333,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 960px;
+    padding: 0;
   }
 
   .form__wrap {
     &--attractions {
-      width: 255px;
+      width: 200px;
     }
 
     &--contacts {

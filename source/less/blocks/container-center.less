@@ -1,6 +1,22 @@
 .container-center {
-  max-width: 400px; /* временное решение*/
+  max-width: 320px;
   margin: 0 auto;
   background-color: @back-col;
-  box-shadow: 0 0 30px 15px @shadow;
+}
+
+@media (min-width: @tablet-w) {
+  .container-center {
+    max-width: 768px;
+    margin: 0 auto;
+    background-color: @back-col;
+  }
+}
+
+@media (min-width: @desktop-w) {
+  .container-center {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: @back-col;
+    box-shadow: 0 0 30px 15px @shadow;
+  }
 }

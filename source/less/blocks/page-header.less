@@ -1,39 +1,168 @@
 .page-header {
-  padding: 16px 0;
+  padding: 0;
+  margin: 0;
 }
 
 .page-header__logo {
-  height: 71px;
-  width: 140px;
+  display: inline-block;
+  margin: 0 auto;
   padding: 0;
-  margin: 0;
-  /*position: absolute;
-	top: 0;
-	left: 50%;
-	margin-left: -70px;
-	z-index: 1;*/
+  position: absolute;
+  //top: 0;
+  //left: 50%;
+  margin-left: 110px;
+  z-index: 1;
+}
+
+.page-header__logo-img {
+  height: 83px;
+  width: 103px;
 }
 
 .page-header__welcome {
   position: relative;
   background-color: @back-col;
-  background-image: url("../../img/bg-back-mobile@1x.jpg");
-  /*background-position: right 0px top -61px;*/
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: right -219px top -15px;
   background-repeat: no-repeat;
-  background-size: 1200px 800px;
+  background-size: 768px 389px;
   padding-bottom: 76px;
+
+  &--photo {
+    padding-bottom: 0;
+    background-position: right -110px top -165px;
+  }
+
+  &--form {
+    padding-top: 25px;
+    background-position: right -110px top -165px;
+    margin-bottom: 40px;
+  }
 }
 
 .page-header__img {
   display: block;
   padding-top: 77px;
+  margin: 0 auto;
+  width: 228px;
+  height: 39px;
+
+  &--photo {
+    padding-top: 0;
+  }
+
+  &--form {
+    padding-top: 0;
+    margin-top: 15px;
+  }
 }
 
 .page-header__welcome::after {
-  content: url("../../img/bg-intro-triangle-mobile.svg");
-  /*position: absolute;*/
+  content: url("../img/bg-intro-triangle-mobile.svg");
+  position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -0.5px; //Вопрос. Не могу понять, почему треугольник меняет свой размер, если его поднять на пиксель выше.
   line-height: 0;
   z-index: 1;
+}
+
+@media (min-width: @tablet-w) {
+  .page-header__welcome {
+    position: relative;
+    background-color: @back-col;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: right 0 top 0;
+    background-repeat: no-repeat;
+    background-size: 768px 518px;
+    padding-bottom: 76px;
+
+    &--photo {
+      background-position: right 0 top -226px;
+      padding-top: 96px;
+      padding-bottom: 120px;
+    }
+
+    &--form {
+      background-position: right 0 top -220px;
+      padding-top: 96px;
+      padding-bottom: 120px;
+    }
+  }
+
+  .page-header__logo {
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 45%;
+    z-index: 1;
+  }
+
+  .page-header__img {
+    width: 461px;
+    height: 346px;
+
+    &--photo {
+      width: 458px;
+      height: 78px;
+      padding-top: 0;
+      margin: 0 auto;
+    }
+
+    &--form {
+      width: 459px;
+      height: 84px;
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+
+  .page-header__welcome::after {
+    content: url("../img/bg-intro-triangle-tablet.svg");
+    /*position: absolute;*/
+    left: 0;
+    bottom: 1.5px;
+    line-height: 0;
+    z-index: 1;
+  }
+}
+
+@media (min-width: @desktop-w) {
+  .page-header__welcome {
+    position: relative;
+    background-color: @back-col;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: right 0 top 0;
+    background-repeat: no-repeat;
+    background-size: 1200px 518px;
+    padding-bottom: 76px;
+
+    &--photo {
+      background-position: right 0 top -229px;
+      padding-top: 96px;
+      padding-bottom: 120px;
+    }
+
+    &--form {
+      background-position: right 0 top -229px;
+      padding-top: 96px;
+      padding-bottom: 120px;
+    }
+  }
+
+  .page-header__welcome::after {
+    content: url("../img/bg-intro-triangle-desktop.svg");
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    line-height: 0;
+    z-index: 1;
+  }
+
+  .page-header__logo {
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+  }
 }

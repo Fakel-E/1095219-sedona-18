@@ -1,5 +1,12 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
 .form__block {
   border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .form__frame {
@@ -7,6 +14,7 @@
   padding-top: 25px;
   padding-left: 20px;
   padding-right: 20px;
+  min-width: 280px;
 }
 
 .form__head {
@@ -24,15 +32,19 @@
   line-height: 26px;
   text-transform: uppercase;
   color: @text-col;
-  margin-right: 10px;
 }
 
-/*.form__wrap {
+.form__wrap {
   display: flex;
   width: 100%;
   align-items: flex-end;
   flex-wrap: wrap;
-}*/
+  text-align: center;
+
+  &--contacts {
+    position: relative;
+  }
+}
 
 .form__enter {
   border: none;
@@ -41,9 +53,118 @@
   font-weight: 700;
   color: @foot-cont;
   background-color: @form-ent;
+  padding: 0;
   padding-top: 22px;
   padding-bottom: 22px;
-  padding-left: 23px;
+  padding-left: 15px;
+  box-sizing: border-box;
+
+  &--second {
+    width: 192px;
+  }
+
+  &--phone {
+    /*content: url("../img/icon-phone.svg");
+    position: absolute;
+    z-index: 1;*/ //Вопрос: Почему, когда я делал иконку через псевдоэлемент after, она вообще не появлялась в браузере?
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  &--mail {
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
+
+.form__item {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form__item + .form__opinion-text {
+  position: relative;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 73px;
+  margin-bottom: 35px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    top: -15px;
+    left: -73px;
+    border: 1px solid @body-col;
+    border-radius: 50%;
+    background-color: @body-col;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -54px;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background: @text-col;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+}
+
+.form__item:checked + .form__opinion-text {
+  &::after {
+    opacity: 1;
+  }
+}
+
+.form__check {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.form__check + .form__opinion-text {
+  position: relative;
+  cursor: pointer;
+  margin-left: 73px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    top: -15px;
+    left: -73px;
+    border: 1px solid @body-col;
+    border-radius: 10%;
+    background-color: @body-col;
+  }
+
+  &::after {
+    content: url("../img/icon-tick.svg");
+    position: absolute;
+    width: 26px;
+    height: 17px;
+    top: 0;
+    left: -55px;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+}
+
+.form__check:checked + .form__opinion-text {
+  &::after {
+    opacity: 1;
+  }
 }
 
 .form__opinion-text {
@@ -53,6 +174,183 @@
   color: @foot-cont;
 }
 
+.form__btn-wrap {
+  margin: 0 auto;
+}
+
 .form__btn {
-  margin-left: 100px;
+  font-size: 21px;
+  line-height: 26px;
+  color: @back-col;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 280px;
+  border: none;
+  background-color: @back-text;
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+}
+
+.form__emotion-text {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: @form-ent;
+  border: none;
+  width: 280px;
+}
+
+@media (min-width: @tablet-w) {
+  .form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__frame {
+    min-width: 324px;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .form__head:nth-child(4) {
+    min-width: 648px;
+    text-align: center;
+  } //Вопрос. Почему не работает выбор элемента?
+
+  .form__enter {
+    &--phone {
+      width: 648px;
+    }
+
+    &--mail {
+      width: 648px;
+    }
+  }
+
+  .form__check + .form__opinion-text {
+    margin-left: 73px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      top: -15px;
+      left: -73px;
+      border: 1px solid @body-col;
+      border-radius: 10%;
+      background-color: @body-col;
+    }
+
+    &::after {
+      content: url("../img/icon-tick.svg");
+      position: absolute;
+      width: 26px;
+      height: 17px;
+      top: 0;
+      left: -55px;
+      opacity: 0;
+      transition: all 0.2s;
+    }
+  }
+
+  .form__attractions-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 648px;
+    padding-left: 80px;
+  }
+
+  .form__wrap--attractions {
+    max-width: 324px;
+  }
+
+  .form__frame--tablet {
+    order: -1;
+  }
+
+  .form__block--tablet {
+    min-width: 648px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__wrap {
+    &--opinion {
+      margin-bottom: 20px;
+    }
+  }
+
+  .form__emotion-text {
+    min-width: 648px;
+  }
+}
+
+@media (min-width: @desktop-w) {
+  .form {
+    min-width: 960px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .form__frame {
+    min-width: 480px;
+  }
+
+  .form__enter {
+    width: 350px;
+
+    &--second {
+      width: 312px;
+    }
+
+    &--phone {
+      width: 320px;
+    }
+
+    &--mail {
+      width: 320px;
+    }
+  }
+
+  .form__text {
+    margin-right: 16px;
+  }
+
+
+  .form__attractions-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 960px;
+    padding: 0;
+  }
+
+  .form__wrap {
+    &--attractions {
+      width: 200px;
+    }
+
+    &--contacts {
+      width: 420px;
+    }
+
+    &--desktop {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .form__emotion-text {
+    min-width: 960px;
+  }
 }

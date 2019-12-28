@@ -2,5 +2,24 @@
   font-size: 14px;
   line-height: 26px;
   margin: 0;
-  display: flex;
+  padding: 0;
+}
+
+.main-nav__wrapper {
+  min-width: 320px;
+}
+
+.main-nav__toogle {
+  min-height: 56px;
+  margin-left: 260px;
+}
+
+@media (min-width: @tablet-w) {
+  .main-nav__wrapper {
+    min-width: 100%;
+  }
+
+  .main-nav__toogle {
+    display: none;
+  }
 }

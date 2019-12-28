@@ -3,21 +3,98 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
   margin: 0;
+  padding: 0;
   width: 100%;
-  padding-left: 73px;
-  padding-right: 73px;
   font-weight: 700;
   color: @back-col;
   background-color: @back-text;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .site-list__item {
   color: @back-col;
 }
 
-.site-list__item:nth-child(2) {
+.site-list__elem {
+  width: 100%;
+  border-bottom: 1px solid @menu-line;
+  text-align: center;
+}
+
+@media (min-width: @tablet-w) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    width: 100%;
+    padding: 0;
+    font-weight: 700;
+    color: @foot-cont;
+    background-color: @back-col;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-sizing: border-box;
+  }
+
+  .site-list__item {
+    color: @foot-cont;
+  }
+
+  .site-list__elem {
+    width: 25%;
+    margin-top: 22px;
+    margin-right: -47px;
+    margin-bottom: 25px;
+    margin-left: 47px;
+    border: none;
+  }
+
+  .site-list__elem :nth-child(2) {
+    margin-left: -20px;
+  }
+
+  .site-list__elem :nth-child(3) {
+    margin-left: 114px;
+  }
+
+  .site-list__elem :nth-child(4) {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: @desktop-w) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-between;
+    width: 100%;
+    padding: 0;
+    font-weight: 700;
+    color: @foot-cont;
+    background-color: @back-col;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-sizing: border-box;
+  }
+
+  .site-list__item {
+    color: @foot-cont;
+  }
+
+  .site-list__elem {
+    width: 25%;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}
+/*.site-list__item:nth-child(2) {
   margin-right: 0;
   margin-left: -24px;
 }
@@ -30,7 +107,7 @@
 .site-list__item:nth-child(3),
 .site-list__item:nth-child(4) {
   text-align: right;
-}
+}*/
 
 .site-list a:hover,
 .site-list a:focus {

@@ -5,6 +5,7 @@
   align-items: center;
   font-weight: 700;
   text-transform: uppercase;
+  margin-top: 40px;
 }
 
 .footer__contacts {
@@ -12,6 +13,7 @@
   line-height: 26px;
   color: @foot-cont;
   text-align: center;
+  margin-bottom: 42px;
 }
 
 .footer__social {
@@ -22,6 +24,7 @@
   width: 151px;
   margin: 0 auto;
   padding: 0;
+  margin-bottom: 42px;
 }
 
 .footer__button {
@@ -41,10 +44,15 @@
 .footer__button:active {
   background-color: @foot-act;
 }
-/*
+
 .footer__button:active path {
-  fill: #88b6d1;
-}*/
+  fill: @back-text;
+}
+
+.footer__htmlacademy-wrap {
+  display: flex;
+  flex-direction: row;
+}
 
 .footer__htmlacademy {
   padding: 0;
@@ -52,18 +60,28 @@
   margin-right: 7px;
   margin-bottom: 4px;
 }
-/*
-.htmlacademy-btn {
-	margin-right: 100px;
-	margin-top: 3px;
+
+@media (min-width: @tablet-w) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer__contacts {
+    margin-left: 60px;
+  }
+
+  .footer__htmlacademy-wrap {
+    margin-right: 60px;
+  }
 }
 
-.htmlacademy-btn:focus path,
-.htmlacademy-btn:hover path {
-	fill: #81b3d2;
-}
+@media (min-width: @desktop-w) {
+  .footer__contacts {
+    margin-left: 120px;
+  }
 
-.htmlacademy-btn:active path {
-	fill: #bdbbbc;
+  .footer__htmlacademy-wrap {
+    margin-right: 120px;
+  }
 }
-*/

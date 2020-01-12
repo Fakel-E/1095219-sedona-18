@@ -1,0 +1,124 @@
+.scroll {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.scroll__first {
+  position: relative;
+  top: -45px;
+  width: 100%;
+  height: 46px;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  &::after {
+    content: url("");
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    top: 19px;
+    left: 58px;
+  }
+
+  &::before {
+    content: url("");
+    position: absolute;
+    height: 2px;
+    width: 236px;
+    top: 23px;
+    left: 22px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.scroll__second {
+  position: relative;
+  width: 100%;
+  top: -46px;
+  height: 65px;
+  background-color: #f2f2f2;
+  background-image: url("../../img/icon-video-subtitles.svg");
+  background-repeat: no-repeat;
+  background-position: 173px 23px;
+
+  &::after {
+    content: url("");
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url("../../img/icon-video-fullscreen.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    z-index: 1;
+    top: 23px;
+    left: 237px;
+  }
+
+  &::before {
+    content: url("");
+    position: absolute;
+    width: 16px;
+    height: 20px;
+    background-image: url("../../img/icon-video-replay.svg");
+    background-repeat: no-repeat;
+    background-size: 16px 20px;
+    z-index: 1;
+    top: 21px;
+    left: 25px;
+  }
+}
+
+@media (min-width: @tablet-w) {
+  .scroll {
+    margin: 0;
+  }
+
+  .scroll__first {
+    top: -92px;
+    height: 93px;
+
+    &::after {
+      top: 42px;
+      left: 206px;
+    }
+
+    &::before {
+      height: 3px;
+      width: 389px;
+      top: 45px;
+      left: 93px;
+    }
+  }
+
+  .scroll__second {
+    top: -170px;
+    background-color: rgba(0, 0, 0, 0);
+    background-position: 525px 21px;
+
+    &::after {
+      top: 20px;
+      left: 587px;
+    }
+
+    &::before {
+      top: 20px;
+      left: 35px;
+    }
+  }
+}
+
+@media (min-width: @desktop-w) {
+  .scroll__first {
+    top: -95px;
+
+    &::before {
+      width: 538px;
+    }
+
+    &::after {
+      top: 43px;
+      left: 205px;
+    }
+  }
+}

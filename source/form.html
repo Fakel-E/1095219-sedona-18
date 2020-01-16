@@ -10,7 +10,7 @@
     // Picture element HTML5 shiv
     document.createElement( "picture" );
   </script>
-  <script src="picturefill.js" async></script>
+  <script src="js/picturefill.js" async></script>
 </head>
 
 <body>
@@ -55,37 +55,41 @@
       <form class="recall__form form" action="https://echo.htmlacademy.ru" method="post">
       <div class="form__frame">
         <fieldset class="form__block">
-        <legend class="form__head">Представьтесь</legend>
+        <legend class="form__head form__head--name-tabl">Представьтесь:</legend>
           <p class="form__wrap form__wrap--desktop">
             <label for="name" class="form__text">Имя*:</label>
             <input type="text" name="name" id="name" placeholder="Петр" class="form__enter">
           </p>
           <p class="form__wrap form__wrap--desktop">
-            <label for="surname" class="form__text">Фамилия*:</label>
+            <label for="surname" class="form__text form__text--sm">Фамилия*:</label>
             <input type="text" name="surname" id="surname" placeholder="Иванов" class="form__enter form__enter--second">
           </p>
           <p class="form__wrap form__wrap--desktop">
-            <label for="parent" class="form__text">Отчество:</label>
+            <label for="parent" class="form__text form__text--pr">Отчество:</label>
             <input type="text" name="parent" id="parent" placeholder="Александрович" class="form__enter form__enter--second">
           </p>
         </fieldset>
       </div>
       <div class="form__frame">
         <fieldset class="form__block form__block--tablet">
-          <legend class="form__head">Контактная информация:</legend>
+          <legend class="form__head form__head--cont-tabl">Контактная информация:</legend>
           <p class="form__wrap form__wrap--contacts">
-            <label for="phone" class="form__text form__text--cont">Контактный телефон*:</label>
-            <input type="text" name="phone" id="phone" placeholder="Введите телефон" class="form__enter form__enter--phone">
+            <label for="phone" class="form__text form__text--cont">
+              <span class="form__text-hidden">Контактный</span> телефон*:
+            </label>
+            <input type="tel" name="phone" id="phone" placeholder="Введите телефон" class="form__enter form__enter--phone">
+            <span class="form__tel"></span>
           </p>
           <p class="form__wrap form__wrap--contacts">
             <label for="mail" class="form__text form__text--cont">Электронная почта*:</label>
-            <input type="text" name="mail" id="mail" placeholder="Введите e-mail" class="form__enter form__enter--mail">
+            <input type="email" name="mail" id="mail" placeholder="Введите e-mail" class="form__enter form__enter--mail">
+            <span class="form__mail"></span>
           </p>
         </fieldset>
       </div>
       <div class="form__frame form__frame--tablet">
         <fieldset class="form__block">
-          <legend class="form__head">Ваше общее впечатление:</legend>
+          <legend class="form__head form__head--opinion-tabl">Ваше общее впечатление:</legend>
           <p class="form__wrap form__wrap--opinion">
             <input type="radio" name="opinion" id="good" checked class="form__item">
             <label for="good" class="form__opinion-text">Скорее положительное</label>
@@ -102,7 +106,7 @@
       </div>
       <div class="form__frame">
         <fieldset class="form__block form__block--tablet">
-          <legend class="form__head">Посещенные достопримечательности:</legend>
+          <legend class="form__head form__head--attractions">Посещенные достопримечательности:</legend>
           <div class="form__attractions-wrap">
             <p class="form__wrap form__wrap--attractions">
               <input type="checkbox" name="attractions" id="bridge" checked class="form__check">
@@ -125,12 +129,13 @@
       </div>
       <div class="form__frame">
         <fieldset class="form__block">
-          <legend class="form__head">Опишите свои эмоции</legend>
+          <legend class="form__head form__head--emot">Опишите свои эмоции</legend>
           <textarea name="emotion-text" id="emotion-text" cols="30" rows="10" placeholder="Опишите подробно все свои восторги" class="form__emotion-text"></textarea>
         </fieldset>
       </div>
       <div class="form__btn-wrap">
         <button type="submit" class="form__btn">Отправить отзыв</button>
+        <span class="form__comment">* - Обязательные поля</span>
       </div>
       </form>
     </section>

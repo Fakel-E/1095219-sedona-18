@@ -53,18 +53,22 @@
 
 .gallery__like {
   position: relative;
+  width: 70px;
 }
 
 .gallery__btn {
   position: absolute;
   width: 24px;
   height: 40px;
-  background-image: url("../img/icon-like.svg");
-  background-size: 24px 22px;
-  background-repeat: no-repeat;
-  background-color: @back-col;
   border: none;
   top: 6px;
+  background-color: @back-col;
+}
+
+.gallery__svg {
+  width: 24px;
+  height: 40px;
+  fill: @back-col;
 }
 
 .gallery__number {
@@ -168,11 +172,11 @@
   }
 
   .gallery__btn {
-    background-color: @body-col;
+    background-color: inherit;
   }
 
   .gallery__number {
-    background-color: @body-col;
+    background-color: inherit;
     width: 40px;
     font-weight: 700;
   }

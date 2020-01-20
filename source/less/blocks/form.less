@@ -102,7 +102,6 @@
 
   &--second {
     width: 192px;
-    margin-left: 1  px;
   }
 
   &--phone {
@@ -116,12 +115,21 @@
     margin-top: 4px;
     margin-bottom: 4px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: @form-bord;
+  }
+
+  &:active {
+    background-color: @back-col;
+  }
 }
 
 .form__tel {
   position: absolute;
   width: 59px;
-  height: 59px;
+  height: 58px;
   background-color: @form-in;
   top: 32px;
   left: 221px;
@@ -130,7 +138,7 @@
 .form__mail {
   position: absolute;
   width: 59px;
-  height: 59px;
+  height: 58px;
   background-color: @form-in;
   top: 31px;
   left: 221px;
@@ -183,9 +191,25 @@
     width: 21px;
     height: 21px;
     border-radius: 50%;
-    background: @text-col;
+    background-color: @text-col;
     opacity: 0;
     transition: all 0.2s;
+  }
+
+  &:hover {
+    &::before {
+      background-color: @form-bord;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: @form-down;
+    }
+
+    &::after {
+      background-color: @form-rad;
+    }
   }
 }
 
@@ -229,6 +253,22 @@
     left: -63px;
     opacity: 0;
     transition: all 0.2s;
+  }
+
+  &:hover {
+    &::before {
+      background-color: @form-bord;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: @form-down;
+    }
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 }
 

@@ -45,6 +45,20 @@
   vertical-align: middle;
 }
 
+.search__btn:hover,
+.search__btn:focus {
+  background-color: @foot-foc;
+}
+
+.search__btn:active {
+  background-color: @foot-act;
+  color: @btn-down;
+}
+
+.search__btn:disabled {
+  background-color: @form-bord;
+}
+
 @media (min-width: @tablet-w) {
   .search {
     margin-left: 150px;

@@ -1,4 +1,5 @@
 .main-nav {
+  position: relative;
   font-size: 14px;
   line-height: 26px;
   margin: 0;
@@ -9,9 +10,55 @@
   min-width: 320px;
 }
 
-.main-nav__toogle {
-  min-height: 56px;
-  margin-left: 260px;
+.main-nav__toggle {
+  position: absolute;
+  z-index: 1;
+  left: 270px;
+
+  min-height: 27px;
+  min-width: 42px;
+
+  cursor: pointer;
+  border: none;
+
+  background-color: @toggle-back;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: url("../img/icon-menu.svg");
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  right: 0;
+  left: auto;
+  background-color: @toggle-back;
+
+  &::before,
+  &::after {
+    content: url("../../img/icon-cross.svg");
+    position: absolute;
+
+    top: 17px;
+    right: 20px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list__elem {
+    display: none;
+  }
+
+  .main-nav--closed .user-list__elem {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-w) {
@@ -19,7 +66,7 @@
     min-width: 100%;
   }
 
-  .main-nav__toogle {
+  .main-nav__toggle {
     display: none;
   }
 }

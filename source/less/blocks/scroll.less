@@ -1,0 +1,136 @@
+.scroll {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.scroll__first {
+  position: relative;
+  top: -45px;
+  width: 100%;
+  height: 46px;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  &::after {
+    content: url("");
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    top: 19px;
+    left: 58px;
+  }
+
+  &::before {
+    content: url("");
+    position: absolute;
+    height: 2px;
+    width: 236px;
+    top: 23px;
+    left: 22px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.scroll__second {
+  position: relative;
+  width: 100%;
+  top: -46px;
+  height: 65px;
+  background-color: #f2f2f2;
+}
+
+.scroll__full,
+.scroll__rep,
+.scroll__sub {
+  position: absolute;
+}
+
+.scroll__sub {
+  left: 174px;
+  top: 21px;
+}
+
+.scroll__rep {
+  left: 25px;
+  top: 23px;
+}
+
+.scroll__full {
+  left: 237px;
+  top: 23px;
+}
+
+@media (min-width: @tablet-w) {
+  .scroll {
+    margin: 0;
+  }
+
+  .scroll__first {
+    top: -92px;
+    height: 93px;
+
+    &::after {
+      top: 42px;
+      left: 206px;
+    }
+
+    &::before {
+      height: 3px;
+      width: 389px;
+      top: 45px;
+      left: 93px;
+    }
+  }
+
+  .scroll__second {
+    top: -170px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .scroll__full,
+  .scroll__rep,
+  .scroll__sub {
+    fill: @back-col;
+  }
+
+  .scroll__sub {
+    left: 525px;
+    top: 21px;
+  }
+
+  .scroll__rep {
+    left: 34px;
+    top: 20px;
+  }
+
+  .scroll__full {
+    left: 587px;
+    top: 21px;
+  }
+}
+
+@media (min-width: @desktop-w) {
+  .scroll__first {
+    top: -95px;
+
+    &::before {
+      width: 538px;
+    }
+
+    &::after {
+      top: 43px;
+      left: 205px;
+    }
+  }
+
+  .scroll__sub {
+    left: 674px;
+    top: 19px;
+  }
+
+  .scroll__full {
+    left: 737px;
+    top: 19px;
+  }
+}

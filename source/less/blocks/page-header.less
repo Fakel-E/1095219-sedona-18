@@ -8,62 +8,74 @@
   margin: 0 auto;
   padding: 0;
   position: absolute;
-  //top: 0;
-  //left: 50%;
-  margin-left: 110px;
+  margin-left: 108px;
   z-index: 1;
 }
 
 .page-header__logo-img {
-  height: 83px;
-  width: 103px;
+  height: 84px;
+  width: 104px;
 }
 
 .page-header__welcome {
   position: relative;
   background-color: @back-col;
   background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: right -219px top -15px;
+  background-position: right -226px top 0;
   background-repeat: no-repeat;
   background-size: 768px 389px;
-  padding-bottom: 76px;
+  margin-top: 55px;
+  padding-bottom: 82px;
+
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
 
   &--photo {
-    padding-bottom: 0;
+    width: 320px;
+    padding-bottom: 67px;
     background-position: right -110px top -165px;
   }
 
   &--form {
     padding-top: 25px;
     background-position: right -110px top -165px;
-    margin-bottom: 40px;
+    padding-bottom: 66px;
   }
 }
 
 .page-header__img {
   display: block;
-  padding-top: 77px;
+  padding-top: 91px;
   margin: 0 auto;
-  width: 228px;
-  height: 39px;
+  width: 283px;
 
   &--photo {
-    padding-top: 0;
+    padding-top: 52px;
+    width: 231px;
+    height: 39px;
   }
 
   &--form {
+    width: 230px;
     padding-top: 0;
-    margin-top: 15px;
+    margin-top: 27px;
   }
 }
 
 .page-header__welcome::after {
-  content: url("../img/bg-intro-triangle-mobile.svg");
+  content: url("");
   position: absolute;
   left: 0;
-  bottom: -0.5px; //Вопрос. Не могу понять, почему треугольник меняет свой размер, если его поднять на пиксель выше.
+  bottom: 0;
   line-height: 0;
   z-index: 1;
+  background-image: url("../img/bg-intro-triangle-mobile.svg");
+  width: 320px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: 320px 150px;
+  background-position: 0 64px;
 }
 
 @media (min-width: @tablet-w) {
@@ -75,17 +87,24 @@
     background-repeat: no-repeat;
     background-size: 768px 518px;
     padding-bottom: 76px;
+    margin-top: -5px;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
 
     &--photo {
+      min-width: 768px;
       background-position: right 0 top -226px;
       padding-top: 96px;
-      padding-bottom: 120px;
+      padding-bottom: 116px;
     }
 
     &--form {
-      background-position: right 0 top -220px;
+      min-width: 768px;
+      background-position: right 0 top -226px;
       padding-top: 96px;
-      padding-bottom: 120px;
+      padding-bottom: 116px;
     }
   }
 
@@ -94,13 +113,15 @@
     padding: 0;
     position: absolute;
     top: 0;
-    left: 45%;
+    left: 43%;
     z-index: 1;
   }
 
   .page-header__img {
     width: 461px;
     height: 346px;
+    padding-top: 78px;
+    margin-bottom: 18px;
 
     &--photo {
       width: 458px;
@@ -110,20 +131,24 @@
     }
 
     &--form {
-      width: 459px;
-      height: 84px;
+      width: 458px;
+      height: 78px;
       padding: 0;
       margin: 0 auto;
     }
   }
 
   .page-header__welcome::after {
-    content: url("../img/bg-intro-triangle-tablet.svg");
-    /*position: absolute;*/
+    content: url("");
     left: 0;
-    bottom: 1.5px;
+    bottom: 0;
     line-height: 0;
-    z-index: 1;
+    background-image: url("../img/bg-intro-triangle-tablet.svg");
+    background-size: 768px 57px;
+    width: 768px;
+    height: 57px;
+    background-repeat: no-repeat;
+    background-position: 0 0.5px;
   }
 }
 
@@ -137,26 +162,38 @@
     background-size: 1200px 518px;
     padding-bottom: 76px;
 
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+
     &--photo {
-      background-position: right 0 top -229px;
-      padding-top: 96px;
+      min-width: 1200px;
+      background-position: right 0 top -217px;
+      padding-top: 100px;
       padding-bottom: 120px;
     }
 
     &--form {
-      background-position: right 0 top -229px;
-      padding-top: 96px;
+      min-width: 1200px;
+      background-position: right 0 top -217px;
+      padding-top: 100px;
       padding-bottom: 120px;
     }
-  }
 
-  .page-header__welcome::after {
-    content: url("../img/bg-intro-triangle-desktop.svg");
-    position: absolute;
-    left: 0;
-    bottom: 10px;
-    line-height: 0;
-    z-index: 1;
+    &::after {
+      content: url("");
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      line-height: 0;
+      z-index: 1;
+      background-image: url("../img/bg-intro-triangle-desktop.svg");
+      background-size: 1200px 58px;
+      width: 1200px;
+      height: 58px;
+      background-repeat: no-repeat;
+      background-position: 0 0.8px;
+    }
   }
 
   .page-header__logo {
@@ -164,5 +201,11 @@
     padding: 0;
     position: absolute;
     z-index: 1;
+    left: 42.5%;
+  }
+
+  .page-header__logo-img {
+    width: 192px;
+    height: 96px;
   }
 }

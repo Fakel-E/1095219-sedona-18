@@ -11,9 +11,10 @@
 
 .form__frame {
   border-top: 1px solid @form-bord;
-  padding-top: 25px;
+  padding-top: 18px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 5px;
   min-width: 280px;
 }
 
@@ -23,8 +24,21 @@
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 auto;
+  margin-bottom: 22px;
   padding: 0;
+
+  &--cont {
+    margin-bottom: 20px;
+  }
+
+  &--attractions {
+    margin-bottom: 17px;
+  }
+
+  &--emot {
+    margin-bottom: 9px;
+  }
 }
 
 .form__text {
@@ -32,6 +46,21 @@
   line-height: 26px;
   text-transform: uppercase;
   color: @text-col;
+  margin-right: 13px;
+  margin-bottom: 17px;
+
+  &--sm {
+    margin-right: 14px;
+  }
+
+  &--pr {
+    margin-right: 18px;
+  }
+
+  &--cont {
+    margin-left: 21px;
+    margin-bottom: 2px;
+  }
 }
 
 .form__wrap {
@@ -40,13 +69,24 @@
   align-items: flex-end;
   flex-wrap: wrap;
   text-align: center;
+  margin-bottom: 19px;
 
   &--contacts {
     position: relative;
   }
+
+  &--attractions {
+    margin: 0;
+    margin-bottom: 14px;
+  }
+}
+
+.form__frame .form__wrap--opinion:nth-child(4) {
+  margin-bottom: 30px;
 }
 
 .form__enter {
+  position: relative;
   border: none;
   font-size: 18px;
   line-height: 26px;
@@ -54,29 +94,60 @@
   color: @foot-cont;
   background-color: @form-ent;
   padding: 0;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  padding-left: 15px;
+  padding-top: 16px;
+  padding-bottom: 17px;
+  padding-left: 12px;
+  padding-right: 6px;
   box-sizing: border-box;
 
   &--second {
     width: 192px;
+    margin-left: 1  px;
   }
 
   &--phone {
-    /*content: url("../img/icon-phone.svg");
-    position: absolute;
-    z-index: 1;*/ //Вопрос: Почему, когда я делал иконку через псевдоэлемент after, она вообще не появлялась в браузере?
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-    background-position: right;
+    min-width: 280px;
+    margin-top: 7px;
+    margin-bottom: -7px;
   }
 
   &--mail {
-    background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
-    background-position: right;
+    min-width: 280px;
+    margin-top: 4px;
+    margin-bottom: 4px;
   }
+}
+
+.form__tel {
+  position: absolute;
+  width: 59px;
+  height: 59px;
+  background-color: @form-in;
+  top: 32px;
+  left: 221px;
+}
+
+.form__mail {
+  position: absolute;
+  width: 59px;
+  height: 59px;
+  background-color: @form-in;
+  top: 31px;
+  left: 221px;
+}
+
+.form__svg {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+}
+
+.form__attractions-wrap {
+  margin-top: 10px;
+  margin-bottom: -3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .form__item {
@@ -89,16 +160,16 @@
   position: relative;
   cursor: pointer;
   margin-top: 15px;
-  margin-left: 73px;
-  margin-bottom: 35px;
+  margin-left: 77px;
+  margin-bottom: 9px;
 
   &::before {
     content: "";
     position: absolute;
     width: 56px;
     height: 56px;
-    top: -15px;
-    left: -73px;
+    top: -13px;
+    left: -78px;
     border: 1px solid @body-col;
     border-radius: 50%;
     background-color: @body-col;
@@ -107,8 +178,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 2px;
-    left: -54px;
+    top: 5px;
+    left: -60px;
     width: 21px;
     height: 21px;
     border-radius: 50%;
@@ -133,7 +204,7 @@
 .form__check + .form__opinion-text {
   position: relative;
   cursor: pointer;
-  margin-left: 73px;
+  margin-left: 78px;
   margin-top: 15px;
   margin-bottom: 25px;
 
@@ -143,7 +214,7 @@
     width: 56px;
     height: 56px;
     top: -15px;
-    left: -73px;
+    left: -80px;
     border: 1px solid @body-col;
     border-radius: 10%;
     background-color: @body-col;
@@ -154,8 +225,8 @@
     position: absolute;
     width: 26px;
     height: 17px;
-    top: 0;
-    left: -55px;
+    top: 3px;
+    left: -63px;
     opacity: 0;
     transition: all 0.2s;
   }
@@ -175,7 +246,8 @@
 }
 
 .form__btn-wrap {
-  margin: 0 auto;
+  margin-left: 20px;
+  margin-bottom: 38px;
 }
 
 .form__btn {
@@ -187,12 +259,11 @@
   width: 280px;
   border: none;
   background-color: @back-text;
-  padding: 0;
   margin: 0;
-  padding-top: 20px;
-  padding-right: 30px;
-  padding-bottom: 20px;
-  padding-left: 30px;
+  padding-top: 15px;
+  padding-right: 47px;
+  padding-bottom: 17px;
+  padding-left: 44px;
 }
 
 .form__emotion-text {
@@ -202,6 +273,16 @@
   background-color: @form-ent;
   border: none;
   width: 280px;
+  height: 160px;
+  margin-top: 9px;
+  margin-bottom: 43px;
+  padding-top: 17px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.form__comment {
+  display: none;
 }
 
 @media (min-width: @tablet-w) {
@@ -209,6 +290,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 53px;
   }
 
   .form__frame {
@@ -218,23 +300,148 @@
     margin: 0;
   }
 
-  .form__head:nth-child(4) {
-    min-width: 648px;
-    text-align: center;
-  } //Вопрос. Почему не работает выбор элемента?
+  .form__head {
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 58px;
+
+    &--opinion-tabl {
+      margin-left: 0;
+    }
+
+    &--name-tabl {
+      margin-left: 58px;
+    }
+
+    &--attractions {
+      position: relative;
+      margin-top: 29px;
+      margin-left: 125px;
+      margin-right: 125px;
+      margin-bottom: 41px;
+
+      &::after {
+        content: url("");
+        position: absolute;
+        width: 122px;
+        height: 1px;
+        background-color: #f2f2f2;
+        top: 26px;
+        right: -124px;
+      }
+
+      &::before {
+        content: url("");
+        position: absolute;
+        width: 125px;
+        height: 1px;
+        background-color: #f2f2f2;
+        top: 26px;
+        left: -125px;
+      }
+    }
+
+    &--cont-tabl {
+      margin-top: 48px;
+      margin-bottom: 10px;
+      position: relative;
+
+      &::after {
+        content: url("");
+        position: absolute;
+        width: 122px;
+        height: 1px;
+        background-color: #f2f2f2;
+        top: 13px;
+        right: -185px;
+      }
+
+      &::before {
+        content: url("");
+        position: absolute;
+        width: 125px;
+        height: 1px;
+        background-color: #f2f2f2;
+        top: 13px;
+        left: -186px;
+      }
+    }
+
+    &--emot {
+      margin-left: 197px;
+      margin-bottom: 50px;
+      position: relative;
+
+      &::after {
+        content: url("");
+        position: absolute;
+        width: 122px;
+        height: 1px;
+        background-color: #f2f2f2;
+        top: 13px;
+        right: -185px;
+      }
+
+      &::before {
+        content: url("");
+        position: absolute;
+        width: 125px;
+        height: 1px;
+        background-color: #f2f2f2;
+        top: 13px;
+        left: -186px;
+      }
+    }
+  }
+
+  .form__text {
+    padding: 0;
+    margin-left: 57px;
+    margin-bottom: 16px;
+    margin-right: 14px;
+
+    &--pr {
+      margin-right: 18px;
+    }
+
+    &--cont {
+      margin: 0;
+      margin-left: 21px;
+    }
+  }
 
   .form__enter {
+    padding-left: 18px;
+    width: 216px;
+
+    &--second {
+      width: 179px;
+    }
+
+
     &--phone {
       width: 648px;
+      margin-bottom: -10px;
     }
 
     &--mail {
       width: 648px;
+      margin-top: 6px;
     }
   }
 
+  .form__tel {
+    top: 33px;
+    left: 589px;
+  }
+
+  .form__mail {
+    top: 32px;
+    left: 589px;
+  }
+
   .form__check + .form__opinion-text {
-    margin-left: 73px;
+    margin-left: 80px;
     margin-top: 15px;
     margin-bottom: 25px;
 
@@ -243,8 +450,8 @@
       position: absolute;
       width: 56px;
       height: 56px;
-      top: -15px;
-      left: -73px;
+      top: -14px;
+      left: -80px;
       border: 1px solid @body-col;
       border-radius: 10%;
       background-color: @body-col;
@@ -255,8 +462,8 @@
       position: absolute;
       width: 26px;
       height: 17px;
-      top: 0;
-      left: -55px;
+      top: 4px;
+      left: -63px;
       opacity: 0;
       transition: all 0.2s;
     }
@@ -266,16 +473,17 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: start;
     min-width: 648px;
-    padding-left: 80px;
-  }
-
-  .form__wrap--attractions {
-    max-width: 324px;
+    margin-top: 0;
+    margin-left: 94px;
+    margin-bottom: 38px;
   }
 
   .form__frame--tablet {
     order: -1;
+    border-right: 2px solid #f2f2f2;
+    box-sizing: border-box;
   }
 
   .form__block--tablet {
@@ -287,12 +495,36 @@
 
   .form__wrap {
     &--opinion {
-      margin-bottom: 20px;
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    &--attractions {
+      max-width: 260px;
+      margin-bottom: 21px;
     }
   }
 
   .form__emotion-text {
     min-width: 648px;
+  }
+
+  .form__btn-wrap {
+    margin-left: 0;
+    margin-top: 11px;
+    margin-right: 0;
+  }
+
+  .form__btn {
+    width: 324px;
+    padding-right: 57px;
+  }
+
+  .form__comment {
+    display: inline;
+    color: #333333;
+    text-transform: uppercase;
+    margin-left: 164px;
   }
 }
 
@@ -301,6 +533,55 @@
     min-width: 960px;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 55px;
+  }
+
+  .form__head {
+    &--opinion-tabl {
+      margin-left: -49px;
+    }
+
+    &--name-tabl {
+      margin-left: -160px;
+    }
+
+    &--cont-tabl {
+      margin-left: 339px;
+      margin-top: 46px;
+      margin-bottom: 61px;
+    }
+
+    &--attractions {
+      margin-top: 32px;
+      margin-left: 343px;
+      margin-right: 459px;
+      margin-bottom: 16px;
+
+      &::after {
+        width: 279px;
+        right: -343px;
+      }
+
+      &::before {
+        width: 279px;
+        left: -342px;
+      }
+    }
+
+    &--emot {
+      margin: 0 auto;
+      margin-bottom: 50px;
+
+      &::after {
+        width: 278px;
+        right: -362px;
+      }
+
+      &::before {
+        width: 278px;
+        left: -353px;
+      }
+    }
   }
 
   .form__frame {
@@ -315,16 +596,63 @@
     }
 
     &--phone {
-      width: 320px;
+      width: 316px;
+      margin: 0;
+      margin-left: 15px;
     }
 
     &--mail {
-      width: 320px;
+      width: 314px;
+      margin: 0;
+      margin-left: 18px;
     }
   }
 
   .form__text {
     margin-right: 16px;
+    margin-left: 77px;
+
+    &--sm {
+      margin-left: 80px;
+      margin-right: 14px;
+    }
+
+    &--pr {
+      margin-left: 80px;
+      margin-right: 17px;
+    }
+
+    &--cont {
+      margin: 0;
+      position: relative;
+      top: -15px;
+    }
+  }
+
+  .form__item + .form__opinion-text {
+    &::after {
+      top: 4px;
+      left: -56px;
+    }
+
+    &::before {
+      top: -14px;
+      left: -74px;
+    }
+  }
+
+  .form__tel {
+    top: 0;
+    left: 341px;
+  }
+
+  .form__mail {
+    top: 0;
+    left: 421px;
+  }
+
+  .form__text-hidden {
+    display: none;
   }
 
 
@@ -332,8 +660,28 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 960px;
+    min-width: 960px;
     padding: 0;
+    margin: 0;
+    margin-left: 79px;
+    margin-top: 41px;
+    margin-bottom: 60px;
+  }
+
+  .form__check + .form__opinion-text {
+    margin: 0;
+  }
+
+  .form__attractions-wrap .form__wrap--attractions:nth-child(2) {
+    margin-left: 59px;
+  }
+
+  .form__attractions-wrap .form__wrap--attractions:nth-child(3) {
+    margin-left: 58px;
+  }
+
+  .form__attractions-wrap .form__wrap--attractions:nth-child(4) {
+    margin-left: 38px;
   }
 
   .form__wrap {
@@ -342,15 +690,29 @@
     }
 
     &--contacts {
-      width: 420px;
+      width: 480px;
     }
 
     &--desktop {
       flex-wrap: nowrap;
     }
+
+    &--opinion {
+      margin-top: 16px;
+    }
   }
 
   .form__emotion-text {
     min-width: 960px;
+  }
+
+  .form__btn {
+    width: 480px;
+    padding-left: 56px;
+  }
+
+  .form__comment {
+    display: inline;
+    margin-left: 320px;
   }
 }

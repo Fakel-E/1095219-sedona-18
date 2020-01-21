@@ -102,7 +102,6 @@
 
   &--second {
     width: 192px;
-    margin-left: 1  px;
   }
 
   &--phone {
@@ -115,6 +114,15 @@
     min-width: 280px;
     margin-top: 4px;
     margin-bottom: 4px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @form-bord;
+  }
+
+  &:active {
+    background-color: @back-col;
   }
 }
 
@@ -183,9 +191,25 @@
     width: 21px;
     height: 21px;
     border-radius: 50%;
-    background: @text-col;
+    background-color: @text-col;
     opacity: 0;
     transition: all 0.2s;
+  }
+
+  &:hover {
+    &::before {
+      background-color: @form-bord;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: @form-down;
+    }
+
+    &::after {
+      background-color: @form-rad;
+    }
   }
 }
 
@@ -229,6 +253,22 @@
     left: -63px;
     opacity: 0;
     transition: all 0.2s;
+  }
+
+  &:hover {
+    &::before {
+      background-color: @form-bord;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: @form-down;
+    }
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -590,6 +630,7 @@
 
   .form__enter {
     width: 350px;
+    margin-left: -1px;
 
     &--second {
       width: 312px;
@@ -644,11 +685,13 @@
   .form__tel {
     top: 0;
     left: 341px;
+    height: 100%;
   }
 
   .form__mail {
     top: 0;
     left: 421px;
+    height: 100%;
   }
 
   .form__text-hidden {
